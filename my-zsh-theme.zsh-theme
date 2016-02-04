@@ -1,5 +1,5 @@
 # PROMPT="[%*] %n:%c $(git_prompt_info)%(!.#.$) "
-PROMPT='%{$fg[green]%}[%*]%{$reset_color%} %{$fg[magenta]%}::%{$reset_color%} %{$fg[cyan]%}%n%{$reset_color%} %{$fg[magenta]%}::%{$reset_color%} %{$fg[red]%}%M%{$reset_color%} %{$fg[magenta]%}::%{$reset_color%} %{$fg[green]%}%c%{$reset_color%}$(git_prompt_info) %{$fg[magenta]%}%(!.#.λ)%{$reset_color%} '
+PROMPT='%{$fg[green]%}[%*]%{$reset_color%} %{$fg[magenta]%}::%{$reset_color%} %{$fg[cyan]%}%n%{$reset_color%} %{$fg[magenta]%}::%{$reset_color%} %{$fg[red]%}%m%{$reset_color%} %{$fg[magenta]%}::%{$reset_color%} %{$fg[green]%}$(sed "s:\([^/]\)[^/]*/:\1/:g" <<< $(pwd))%{$reset_color%}$(git_prompt_info) %{$fg[magenta]%}%(!.#.λ)%{$reset_color%} '
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[yellow]%}git:("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")%{$reset_color%}"
